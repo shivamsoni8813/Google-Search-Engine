@@ -1,6 +1,6 @@
 import React from 'react'
 import GoogleNavbar from '../Navbar/GoogleNavbar'
-import Navbar from '../Navbar/Navbar'
+import 'primeicons/primeicons.css';
 import './Result.css'
 function Result({ searchRes }) {
    console.log(searchRes.map((e)=>{
@@ -14,10 +14,9 @@ function Result({ searchRes }) {
                 <div className="mask11s mx-4 mt-4">
                     <h1>Google</h1>
                 </div>
-                <form className="d-flex" role="search">
-                    <input className=" searchInputs form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <form className="d-flex inputForm" role="search">
+                <input  className=" searchInputs form-control " type="search" placeholder="Search" aria-label="Search"/><i className="pi pi-times mx-3"></i><span className="pi pi-search"></span>
                 </form>
-                <button type="button" className="searchBtn btn btn-primary">Search</button>
 
             </div>
                 <GoogleNavbar/>

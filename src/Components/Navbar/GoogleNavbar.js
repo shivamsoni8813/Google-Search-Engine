@@ -5,16 +5,19 @@ function GoogleNavbar() {
     <div>
       <ul className="nav justify-content-center">
   <li className="nav-item">
-    <a className="nav-link active" aria-current="page" href="#">Active</a>
+    <a className="nav-link" aria-current="page" href="#">All</a>
   </li>
   <li className="nav-item">
-    <a className="nav-link" href="#">Link</a>
+    <a className="nav-link" href="#">video</a>
   </li>
   <li className="nav-item">
-    <a className="nav-link" href="#">Link</a>
+    <a className="nav-link" href="#">Image</a>
   </li>
   <li className="nav-item">
-    <a className="nav-link disabled">Disabled</a>
+    <a className="nav-link disabled">News</a>
+  </li>
+  <li className="nav-item">
+    <a className="nav-link disabled">Shopping</a>
   </li>
 </ul>
     </div>
