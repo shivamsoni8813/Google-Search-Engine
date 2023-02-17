@@ -1,0 +1,16 @@
+.serachContainer{
+    width: 95vw;
+    height: 60vh;
+    margin-top: 7rem;
+    text-align: center;
+}
+.mask1 h1{
+    font-size: 6rem;
+}
+.searchInput{
+    width: 50%;
+    margin-left: 21rem;
+    margin-top: 2rem;
+    border-radius: 20px;
+    height: 3rem;
+}
