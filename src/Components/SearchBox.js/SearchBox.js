@@ -8,27 +8,31 @@ function SearchBox() {
     let [input, setInput] = useState("")
     let [searchRes, setSearchRes] = useState([])
     let [click, setclick] = useState(false)
+    let [page, setpage] = useState([])
+    let [time , setTime] = useState(0)
 
     let handleClick = async()=>{
         try {
          
             let url = `https://www.googleapis.com/customsearch/v1?key=AIzaSyC6NYDMumB9uJRgiDuU8IGDLODseS_Ic9w&cx=017576662512468239146:omuauf_lfve&q=${input}`
-            let {data} = await axios.get(url)
-            setSearchRes(data.items)
+            let res = await axios.get(url)
+            setSearchRes(res.data.items)
+            setpage(res.data.searchInformation.totalResults)
+            setTime(res.data.searchInformation.searchTime)
+            console.log(res)
             setclick(true)
-            console.log(data)
         } catch (error) {
             console.log(error)
         }
     }
 
-
+   
     
 
     return (
         <div>
             <Navbar/>
-           {click ? <Result searchRes={searchRes}/>: <div className="serachContainer text-center">
+           {click ? <Result searchRes={searchRes} page = {page} time = {time}/>: <div className="serachContainer text-center">
                 <div className="mask1 ">
                     <h1>Google</h1>
                 </div>
